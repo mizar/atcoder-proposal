@@ -1,7 +1,7 @@
-FROM ubuntu:22.10
+FROM ubuntu:24.04
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends sudo
-RUN groupadd -g 1000 runner && \
+RUN groupadd runner && \
     useradd -g runner -G sudo -m runner && \
     echo 'runner ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     mkdir /judge && \

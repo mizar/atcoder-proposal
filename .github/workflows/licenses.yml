@@ -5,9 +5,9 @@ on:
 
 jobs:
   cargo-deny:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Read ./rust-toolchain
         id: read-rust-toolchain
@@ -23,15 +23,17 @@ jobs:
         uses: taiki-e/install-action@cargo-binstall
 
       - name: Install cargo-deny
-        run: cargo binstall cargo-deny@^0.13 --no-confirm --log-level debug
+        run: cargo binstall cargo-deny@^0.16 --no-confirm --log-level debug
 
       - name: cargo-deny (main)
         run: cargo deny check
+      # https://github.com/EmbarkStudios/cargo-deny/pull/626 # Pixar ライセンスを無視するworkaround
+      # https://github.com/jpeddicord/askalono/issues/94
 
   bottlerocket-license-scan:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Read ./rust-toolchain
         id: read-rust-toolchain
