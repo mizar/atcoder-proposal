@@ -1,57 +1,201 @@
-# https://github.com/dimforge/nalgebra/issues/972
-# BSD-3-Clauseで正しく、LICENSEファイルだけアップデートされていない状態らしい
-[clarify.bstr]
-expression = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
+[clarify.aho-corasick]
+expression = "Unlicense OR MIT"
 license-files = [
-    { path = "COPYING", hash = 0x278afbcf },
-    { path = "LICENSE-APACHE", hash = 0x24b54f4b} ,
-    { path = "LICENSE-MIT", hash = 0x462dee44 },
-    { path = "src/unicode/data/LICENSE-UNICODE", hash = 0x70f7339 },
+    { path = "LICENSE-MIT", hash = 0x616d8a83, license = "MIT" },
+    { path = "UNLICENSE", hash = 0x87b84020, license = "Unlicense" },
+# COPYING ファイルが自動分類できないため
+    { path = "COPYING", hash = 0x969f37d8, license = "Unlicense OR MIT" },
 ]
 
-[clarify.nalgebra]
-expression = "BSD-3-Clause"
-license-files = []
-skip-files = [
-    "LICENSE",
-]
-
-[clarify.regex]
+[clarify.bstr]
 expression = "MIT OR Apache-2.0"
 license-files = [
-    { path = "LICENSE-APACHE", hash = 0x24b54f4b },
-    { path = "LICENSE-MIT", hash = 0xb755395b },
+    { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x462dee44, license = "MIT" },
+# COPYING ファイルが自動分類できないため
+    { path = "COPYING", hash = 0x278afbcf, license = "MIT OR Apache-2.0" },
 ]
-skip-files = [
-    "src/testdata/LICENSE",
+
+[clarify.byteorder]
+expression = "Unlicense OR MIT"
+license-files = [
+    { path = "LICENSE-MIT", hash = 0x616d8a83, license = "MIT" },
+    { path = "UNLICENSE", hash = 0x87b84020, license = "Unlicense" },
+# COPYING ファイルが自動分類できないため
+    { path = "COPYING", hash = 0x969f37d8, license = "Unlicense OR MIT" },
+]
+
+[clarify.memchr]
+expression = "Unlicense OR MIT"
+license-files = [
+    { path = "LICENSE-MIT", hash = 0x616d8a83, license = "MIT" },
+    { path = "UNLICENSE", hash = 0x87b84020, license = "Unlicense" },
+# COPYING ファイルが自動分類できないため
+    { path = "COPYING", hash = 0x969f37d8, license = "Unlicense OR MIT" },
+]
+
+[clarify.nalgebra-macros]
+expression = "Apache-2.0"
+license-files = [
+# `LICENSE` ファイルに `../LICENSE` (nalbegaのLICENSEを参照) とだけ書かれているため
+# https://github.com/dimforge/nalgebra/blob/main/nalgebra-macros/LICENSE
+    { path = "LICENSE", hash = 0xe2278313, license = "Apache-2.0" },
+]
+
+[clarify.petgraph]
+# CC-BY-SA-4.0 ライセンスが含まれるため
+expression = "(MIT OR Apache-2.0) AND CC-BY-SA-4.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0xc97e30bd, license = "MIT" },
+# ## Logo
+# The mascot is named "Sir Paul Rustory Graphosaurus" (close friends call him Paul). The logo has been created by the talented Aren.
+# https://docs.rs/crate/petgraph/latest/source/README.md
+# https://docs.rs/crate/petgraph/latest/source/assets/LICENSE.md
+    { path = "assets/LICENSE.md", hash = 0x7c815b17, license = "CC-BY-SA-4.0" },
+]
+
+[clarify.rand]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x9e2a0652, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_chacha]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x701e2ab8, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_core]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x631d6796, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_distr]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x631d6796, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x2e96c189, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_hc]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x9e2a0652, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x2e96c189, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_pcg]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x701e2ab8, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x6a012d70, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_xorshift]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x701e2ab8, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.rand_xoshiro]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0xb1c84bbf, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.recur-fn]
+expression = "MIT OR Apache-2.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0xee2c88bd, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x2af2bb98, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0x991da501, license = "MIT OR Apache-2.0" },
 ]
 
 [clarify.regex-syntax]
+# Unicode-DFS-2016 ライセンスが含まれるため
 expression = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
 license-files = [
-    { path = "LICENSE-APACHE", hash = 0x24b54f4b },
-    { path = "LICENSE-MIT", hash = 0xb755395b },
-    { path = "src/unicode_tables/LICENSE-UNICODE", hash = 0xa7f28b93 },
+# Cargo.toml では "MIT OR Apache-2.0" と記述されているが、 "Unicode-DFS-2016" が含まれているため
+    { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0xb755395b, license = "MIT" },
+    { path = "src/unicode_tables/LICENSE-UNICODE", hash = 0xa7f28b93, license = "Unicode-DFS-2016" },
 ]
 
 [clarify.typenum]
 expression = "MIT OR Apache-2.0"
 license-files = [
-    { path = "LICENSE", hash = 0xa4618a29 },
-    { path = "LICENSE-APACHE", hash = 0x91d5a0a7 },
-    { path = "LICENSE-MIT", hash = 0xb9f15462 },
+# LICENSE ファイルが自動分類できないため
+    { path = "LICENSE", hash = 0xa4618a29, license = "MIT OR Apache-2.0" },
+    { path = "LICENSE-APACHE", hash = 0x91d5a0a7, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0xb9f15462, license = "MIT" },
 ]
 
-[clarify.unicode-ident]
+[[clarify.unicode-ident]]
 expression = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
+version = "<1.0.14"
 license-files = [
-    { path = "LICENSE-APACHE", hash = 0xb5518783 },
-    { path = "LICENSE-MIT", hash = 0x386ca1bc },
-    { path = "LICENSE-UNICODE", hash = 0x9698cbbe },
+    { path = "LICENSE-APACHE", hash = 0xb5518783, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x386ca1bc, license = "MIT" },
+# LICENSE-UNICODE ファイルが "Unicode-3.0" と誤認識されることがあるため
+    { path = "LICENSE-UNICODE", hash = 0x9698cbbe, license = "Unicode-DFS-2016" },
 ]
 
-[clarify.whiteread]
-expression = "LicenseRef-MIT-WITH-NonMilitaryNonSpy"
+#[[clarify.unicode-ident]]
+#expression = "(MIT OR Apache-2.0) AND Unicode-3.0"
+#version = ">=1.0.14"
+#license-files = [
+#    { path = "LICENSE-APACHE", hash = 0xb5518783, license = "Apache-2.0" },
+#    { path = "LICENSE-MIT", hash = 0x386ca1bc, license = "MIT" },
+## 古い SPDX では "Unicode-3.0" ライセンスが登録されていないため
+#    { path = "LICENSE-UNICODE", hash = 0x3475d800, license = "Unicode-3.0" },
+#]
+
+[clarify.unicode-xid]
+expression = "MIT OR Apache-2.0"
 license-files = [
-    { path = "LICENSE", hash = 0xf385eca4 },
+    { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x86e6d3b9, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0x860b1718, license = "MIT OR Apache-2.0" },
+]
+
+[clarify.vec_mut_scan]
+expression = "0BSD"
+license-files = [
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa0851550, license = "0BSD" },
+]
+
+[clarify.wasi]
+expression = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x386ca1bc, license = "MIT" },
+# LICENSE-Apache-2.0_WITH_LLVM-exception ファイルが "Apache-2.0" と自動分類されるため
+    { path = "LICENSE-Apache-2.0_WITH_LLVM-exception", hash = 0xdebf99f1, license = "Apache-2.0 WITH LLVM-exception" },
 ]
