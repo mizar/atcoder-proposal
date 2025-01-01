@@ -11,14 +11,17 @@ jobs:
         include:
           - { target: x86_64-pc-windows-msvc, os: windows-2019 }
           - { target: x86_64-pc-windows-msvc, os: windows-2022 }
-          - { target: x86_64-apple-darwin, os: macos-11 }
-          - { target: x86_64-apple-darwin, os: macos-12 }
+          - { target: x86_64-pc-windows-msvc, os: windows-2025 }
+          - { target: x86_64-apple-darwin, os: macos-13 }
+          - { target: x86_64-apple-darwin, os: macos-14 }
+          - { target: x86_64-apple-darwin, os: macos-15 }
           - { target: x86_64-unknown-linux-gnu, os: ubuntu-20.04 }
           - { target: x86_64-unknown-linux-gnu, os: ubuntu-22.04 }
+          - { target: x86_64-unknown-linux-gnu, os: ubuntu-24.04 }
     name: test (${{ matrix.target }})
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Read ./rust-toolchain
         id: read-rust-toolchain
@@ -35,9 +38,9 @@ jobs:
         run: cargo test --target ${{ matrix.target }}
 
   docker-build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Update ShellCheck
         run: |
@@ -58,5 +61,65 @@ jobs:
       - name: Generate install-command.bash
         run: cargo xtask gen-command > ./install-command.bash
 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: install-command
+          path: install-command.bash
+
       - name: docker-build
         run: docker build .
+
+  gen-toml-spdx-v3_22:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read ./rust-toolchain
+        id: read-rust-toolchain
+        run: echo "toolchain=$(cat ./rust-toolchain)" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ steps.read-rust-toolchain.outputs.toolchain }}
+
+      - name: clone SPDX v3.22
+        run: git clone https://github.com/spdx/license-list-data.git /tmp/license-list-data --depth 1 -b v3.22
+
+      - name: Generate install-script.toml
+        run: cargo xtask gen-toml /tmp/license-list-data/json/details/ | tee ./install-script-spdx-v3.22.toml
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: install-script-spdx-v3.22
+          path: install-script-spdx-v3.22.toml
+
+  gen-toml-spdx-latest:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read ./rust-toolchain
+        id: read-rust-toolchain
+        run: echo "toolchain=$(cat ./rust-toolchain)" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ steps.read-rust-toolchain.outputs.toolchain }}
+
+      - name: clone SPDX latest
+        run: git clone https://github.com/spdx/license-list-data.git /tmp/license-list-data --depth 1
+
+      - name: Generate install-script.toml
+        run: cargo xtask gen-toml /tmp/license-list-data/json/details/ | tee ./install-script-spdx-latest.toml
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: install-script-spdx-latest
+          path: install-script-spdx-latest.toml

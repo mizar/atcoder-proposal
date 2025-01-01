@@ -5,9 +5,9 @@ on:
 
 jobs:
   rustfmt:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Read ./rust-toolchain
         id: read-rust-toolchain
@@ -27,9 +27,9 @@ jobs:
         run: cargo fmt --all --manifest-path ./xtask/Cargo.toml -- --check
 
   clippy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Read ./rust-toolchain
         id: read-rust-toolchain
