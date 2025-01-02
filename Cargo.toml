@@ -35,7 +35,7 @@ amplify_num = { version = "=0.5.3", features = ["std"] }
 easy-ext = "=1.0.2"
 multimap = "=0.10.0"
 btreemultimap = "=0.1.1"
-bstr = "=1.11.1"
+bstr = "=1.11.3"
 az = "=1.2.1"
 glidesort = "=0.1.2"
 tap = "=1.0.1"
