@@ -41,6 +41,12 @@ build.allow-build-scripts = [
     { name = "varisat", version = "=0.2.2" }, # https://docs.rs/crate/varisat/0.2.2/source/build.rs
 ]
 
+[sources]
+allow-git = [
+#    "https://github.com/rust-lang-ja/ac-library-rs.git",
+    "https://github.com/petgraph/petgraph.git",
+]
+
 [licenses]
 allow = [
     "0BSD",
