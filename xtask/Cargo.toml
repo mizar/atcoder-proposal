@@ -11,7 +11,7 @@ askama = "0.12.1"
 build-info = "0.0.39"
 camino = "1.1.9"
 cargo_metadata = "0.19.1"
-clap = { version = "4.5.23", features = ["derive"] }
+clap = { version = "4.5.24", features = ["derive"] }
 color-eyre = "0.6.3"
 eyre = "0.6.12"
 fs-err = "3.0.0"
