@@ -25,7 +25,7 @@ build.allow-build-scripts = [
     { name = "num-rational", version = "=0.4.1" }, # https://docs.rs/crate/num-rational/0.4.1/source/build.rs
     { name = "num-traits", version = "=0.2.19" }, # https://docs.rs/crate/num-traits/0.2.19/source/build.rs
     { name = "paste", version = "=1.0.15" }, # https://docs.rs/crate/paste/1.0.15/source/build.rs
-    { name = "proc-macro2", version = "=1.0.92" }, # https://docs.rs/crate/proc-macro2/1.0.92/source/build.rs
+    { name = "proc-macro2", version = "=1.0.93" }, # https://docs.rs/crate/proc-macro2/1.0.93/source/build.rs
     { name = "proc-macro-error", version = "=1.0.4" }, # https://docs.rs/crate/proc-macro-error/1.0.4/source/build.rs
     { name = "proc-macro-error-attr", version = "=1.0.4" }, # https://docs.rs/crate/proc-macro-error-attr/1.0.4/source/build.rs
     { name = "quote", version = "=1.0.30" }, # https://docs.rs/crate/quote/1.0.30/source/build.rs
