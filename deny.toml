@@ -36,7 +36,7 @@ build.allow-build-scripts = [
     { name = "syn", version = "=1.0.109" }, # https://docs.rs/crate/syn/1.0.109/source/build.rs
     { name = "target-features", version = "=0.1.6" }, # https://docs.rs/crate/target-features/0.1.6/source/build.rs
     { name = "thiserror", version = "=1.0.69" }, # https://docs.rs/crate/thiserror/1.0.69/source/build.rs
-    { name = "thiserror", version = "=2.0.10" }, # https://docs.rs/crate/thiserror/2.0.10/source/build.rs
+    { name = "thiserror", version = "=2.0.11" }, # https://docs.rs/crate/thiserror/2.0.11/source/build.rs
     { name = "typenum", version = "=1.17.0" }, # https://docs.rs/crate/typenum/1.17.0/source/build/main.rs
     { name = "varisat", version = "=0.2.2" }, # https://docs.rs/crate/varisat/0.2.2/source/build.rs
 ]
