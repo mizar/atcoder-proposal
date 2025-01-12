@@ -197,7 +197,7 @@ license-files = [
     { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
     { path = "LICENSE-MIT", hash = 0x386ca1bc, license = "MIT" },
 # LICENSE-Apache-2.0_WITH_LLVM-exception ファイルが "Apache-2.0" と自動分類されるため
-    { path = "LICENSE-Apache-2.0_WITH_LLVM-exception", hash = 0xdebf99f1, license = "Apache-2.0 WITH LLVM-exception" },
+    { path = "LICENSE-Apache-2.0_WITH_LLVM-exception", hash = 0xdebf99f1, license = "Apache-2.0" },
 ]
 
 [spdx]

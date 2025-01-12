@@ -202,7 +202,7 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
                 writeln!(
                     &mut libraries,
                     "    {{ name = '{license}', url = 'https://docs.rs/crate/{name}/{version}/source/Cargo.toml' }},",
-                    license = expr_req.req,
+                    license = expr_req.req.license.id().unwrap().name,
                     name = package.name,
                     version = package.version,
                 )?;
