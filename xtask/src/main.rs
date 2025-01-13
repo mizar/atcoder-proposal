@@ -1,5 +1,5 @@
 use askama::Template as _;
-use build_info::{build_info, CompilerChannel};
+use build_info::build_info;
 use camino::Utf8Path;
 use cargo_metadata::{CargoOpt, Dependency, DependencyKind, MetadataCommand, Package};
 use clap::Parser as _;
@@ -393,10 +393,10 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
     let commands = CommandTemplate {
         rust_version: build_info().compiler.version.to_string(),
         rust_channel: match build_info().compiler.channel {
-            CompilerChannel::Stable => build_info().compiler.version.to_string(),
-            CompilerChannel::Beta => "beta".to_string(),
-            CompilerChannel::Nightly => "nightly".to_string(),
-            CompilerChannel::Dev => "dev".to_string(),
+            build_info::CompilerChannel::Stable => build_info().compiler.version.to_string(),
+            build_info::CompilerChannel::Beta => "beta".to_string(),
+            build_info::CompilerChannel::Nightly => "nightly".to_string(),
+            build_info::CompilerChannel::Dev => "dev".to_string(),
         },
         cargo_toml: cargo_toml.to_string().trim_start(),
         git_rev: &git_rev,
@@ -459,10 +459,10 @@ fn gen_command(ArgsGenCommand {}: ArgsGenCommand) -> eyre::Result<()> {
     let install_command = Template {
         rust_version: build_info().compiler.version.to_string(),
         rust_channel: match build_info().compiler.channel {
-            CompilerChannel::Stable => build_info().compiler.version.to_string(),
-            CompilerChannel::Beta => "beta".to_string(),
-            CompilerChannel::Nightly => "nightly".to_string(),
-            CompilerChannel::Dev => "dev".to_string(),
+            build_info::CompilerChannel::Stable => build_info().compiler.version.to_string(),
+            build_info::CompilerChannel::Beta => "beta".to_string(),
+            build_info::CompilerChannel::Nightly => "nightly".to_string(),
+            build_info::CompilerChannel::Dev => "dev".to_string(),
         },
         cargo_toml: cargo_toml.to_string().trim_start(),
         git_rev: &build_info()
