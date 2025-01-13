@@ -1,5 +1,5 @@
 use askama::Template as _;
-use build_info::{CompilerChannel, build_info};
+use build_info::{build_info, CompilerChannel};
 use camino::Utf8Path;
 use cargo_metadata::{CargoOpt, Dependency, DependencyKind, MetadataCommand, Package};
 use clap::Parser as _;
