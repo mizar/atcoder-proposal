@@ -44,7 +44,6 @@ build.allow-build-scripts = [
 [sources]
 allow-git = [
 #    "https://github.com/rust-lang-ja/ac-library-rs.git",
-    "https://github.com/petgraph/petgraph.git",
 ]
 
 [licenses]
