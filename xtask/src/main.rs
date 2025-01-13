@@ -1,5 +1,5 @@
 use askama::Template as _;
-use build_info::build_info;
+use build_info::{CompilerChannel, build_info};
 use camino::Utf8Path;
 use cargo_metadata::{CargoOpt, Dependency, DependencyKind, MetadataCommand, Package};
 use clap::Parser as _;
@@ -365,7 +365,12 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
                     license = license_name,
                     name = package.name,
                     version = package.version,
-                    path = dir_entry.path().strip_prefix(base_dir)?.to_str().unwrap().replace("\\", "/"),
+                    path = dir_entry
+                        .path()
+                        .strip_prefix(base_dir)?
+                        .to_str()
+                        .unwrap()
+                        .replace("\\", "/"),
                 )?;
             }
         }
@@ -386,7 +391,13 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
         .clone();
 
     let commands = CommandTemplate {
-        rust_version: &build_info().compiler.version.to_string(),
+        rust_version: build_info().compiler.version.to_string(),
+        rust_channel: match build_info().compiler.channel {
+            CompilerChannel::Stable => build_info().compiler.version.to_string(),
+            CompilerChannel::Beta => "beta".to_string(),
+            CompilerChannel::Nightly => "nightly".to_string(),
+            CompilerChannel::Dev => "dev".to_string(),
+        },
         cargo_toml: cargo_toml.to_string().trim_start(),
         git_rev: &git_rev,
     }
@@ -409,7 +420,8 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
     #[derive(askama::Template)]
     #[template(path = "./install-command.bash.txt")]
     struct CommandTemplate<'a> {
-        rust_version: &'a str,
+        rust_version: String,
+        rust_channel: String,
         cargo_toml: &'a str,
         git_rev: &'a str,
     }
@@ -446,6 +458,12 @@ fn gen_command(ArgsGenCommand {}: ArgsGenCommand) -> eyre::Result<()> {
 
     let install_command = Template {
         rust_version: build_info().compiler.version.to_string(),
+        rust_channel: match build_info().compiler.channel {
+            CompilerChannel::Stable => build_info().compiler.version.to_string(),
+            CompilerChannel::Beta => "beta".to_string(),
+            CompilerChannel::Nightly => "nightly".to_string(),
+            CompilerChannel::Dev => "dev".to_string(),
+        },
         cargo_toml: cargo_toml.to_string().trim_start(),
         git_rev: &build_info()
             .version_control
@@ -465,8 +483,9 @@ fn gen_command(ArgsGenCommand {}: ArgsGenCommand) -> eyre::Result<()> {
     #[template(path = "./install-command.bash.txt")]
     struct Template<'a> {
         rust_version: String,
+        rust_channel: String,
         cargo_toml: &'a str,
-        git_rev: &'static str,
+        git_rev: &'a str,
     }
 }
 

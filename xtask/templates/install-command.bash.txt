@@ -6,11 +6,12 @@ sudo apt-get update
 sudo apt-get install -y --no-install-recommends build-essential ca-certificates curl
 
 rust_version={{ rust_version }}
+rust_channel={{ rust_channel }}
 
 # https://forge.rust-lang.org/infra/other-installation-methods.html#standalone-installers
-curl "https://static.rust-lang.org/dist/rust-$rust_version-x86_64-unknown-linux-gnu.tar.gz" -fO --output-dir /tmp
-tar xvf "/tmp/rust-$rust_version-x86_64-unknown-linux-gnu.tar.gz" -C /tmp
-sudo "/tmp/rust-$rust_version-x86_64-unknown-linux-gnu/install.sh"
+curl "https://static.rust-lang.org/dist/rust-$rust_channel-x86_64-unknown-linux-gnu.tar.gz" -fO --output-dir /tmp
+tar xvf "/tmp/rust-$rust_channel-x86_64-unknown-linux-gnu.tar.gz" -C /tmp
+sudo "/tmp/rust-$rust_channel-x86_64-unknown-linux-gnu/install.sh"
 
 cargo -vV
 [ "$(command -v cargo)" = /usr/local/bin/cargo ]
