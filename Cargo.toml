@@ -26,7 +26,7 @@ argio = "=0.2.0"
 bitvec = "=1.0.1"
 counter = "=0.6.0"
 hashbag = "=0.1.12"
-pathfinding = "=4.13.0"
+pathfinding = "=4.13.1"
 recur-fn = "=2.2.0"
 indexing = { version = "=0.4.1", features = ["experimental_pointer_ranges"] }
 amplify = { version = "=4.8.0", features = ["c_raw", "rand", "stringly_conversions"] }
