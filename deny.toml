@@ -30,7 +30,7 @@ build.allow-build-scripts = [
     { name = "proc-macro-error-attr", version = "=1.0.4" }, # https://docs.rs/crate/proc-macro-error-attr/1.0.4/source/build.rs
     { name = "quote", version = "=1.0.30" }, # https://docs.rs/crate/quote/1.0.30/source/build.rs
     { name = "radium", version = "=0.7.0" }, # https://docs.rs/crate/radium/0.7.0/source/build.rs
-    { name = "semver", version = "=1.0.24" }, # https://docs.rs/crate/semver/1.0.24/source/build.rs
+    { name = "semver", version = "=1.0.25" }, # https://docs.rs/crate/semver/1.0.25/source/build.rs
     { name = "serde", version = "=1.0.217" }, # https://docs.rs/crate/serde/1.0.217/source/build.rs
     { name = "serde_derive", version = "=1.0.159" }, # https://docs.rs/crate/serde_derive/1.0.159/source/build.rs
     { name = "syn", version = "=1.0.109" }, # https://docs.rs/crate/syn/1.0.109/source/build.rs
