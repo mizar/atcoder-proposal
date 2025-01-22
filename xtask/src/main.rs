@@ -113,6 +113,7 @@ fn main() -> eyre::Result<()> {
 fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
     let mut cargo_toml = include_str!("../../Cargo.toml").parse::<toml_edit::DocumentMut>()?;
     cargo_toml.remove("workspace");
+    cargo_toml.remove("cargo-features");
 
     let clarify: Clarifications = toml::from_str(include_str!("../../clarify.toml"))?;
     let clarify_vec = clarify
@@ -455,6 +456,7 @@ fn gen_specs(ArgsGenSpecs {}: ArgsGenSpecs) -> eyre::Result<()> {
 fn gen_command(ArgsGenCommand {}: ArgsGenCommand) -> eyre::Result<()> {
     let mut cargo_toml = include_str!("../../Cargo.toml").parse::<toml_edit::DocumentMut>()?;
     cargo_toml.remove("workspace");
+    cargo_toml.remove("cargo-features");
 
     let install_command = Template {
         rust_version: build_info().compiler.version.to_string(),
