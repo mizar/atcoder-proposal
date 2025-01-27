@@ -64,10 +64,21 @@ license-files = [
     { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
 ]
 
-[clarify.rand_chacha]
+[[clarify.rand_chacha]]
 expression = "MIT OR Apache-2.0"
+version = "<0.9.0"
 license-files = [
     { path = "LICENSE-APACHE", hash = 0x701e2ab8, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[[clarify.rand_chacha]]
+expression = "MIT OR Apache-2.0"
+version = ">=0.9.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x9e2a0652, license = "Apache-2.0" },
     { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
 # COPYRIGHT ファイルが自動分類できないため
     { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
@@ -100,10 +111,21 @@ license-files = [
     { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
 ]
 
-[clarify.rand_pcg]
+[[clarify.rand_pcg]]
 expression = "MIT OR Apache-2.0"
+version = "<0.9.0"
 license-files = [
     { path = "LICENSE-APACHE", hash = 0x701e2ab8, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0x6a012d70, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[[clarify.rand_pcg]]
+expression = "MIT OR Apache-2.0"
+version = ">=0.9.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0x631d6796, license = "Apache-2.0" },
     { path = "LICENSE-MIT", hash = 0x6a012d70, license = "MIT" },
 # COPYRIGHT ファイルが自動分類できないため
     { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
