@@ -11,7 +11,7 @@ multiple-versions = "allow"
 build.allow-build-scripts = [
     { name = "anyhow", version = "=1.0.95" }, # https://docs.rs/crate/anyhow/1.0.95/source/build.rs
     { name = "az", version = "=1.2.1" }, # https://docs.rs/crate/az/1.2.1/source/build.rs
-    { name = "getrandom", version = "=0.3.0" }, # https://docs.rs/crate/getrandom/0.3.0/source/build.rs
+    { name = "getrandom", version = "=0.3.1" }, # https://docs.rs/crate/getrandom/0.3.1/source/build.rs
     { name = "im-rc", version = "=15.1.0" }, # https://docs.rs/crate/im-rc/15.1.0/source/build.rs
     { name = "indexmap", version = "=1.9.3" }, # https://docs.rs/crate/indexmap/1.9.3/source/build.rs
     { name = "libc", version = "=0.2.169" }, # https://docs.rs/crate/libc/0.2.169/source/build.rs

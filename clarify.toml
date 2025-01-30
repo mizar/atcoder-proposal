@@ -134,16 +134,27 @@ license-files = [
 [clarify.rand_xorshift]
 expression = "MIT OR Apache-2.0"
 license-files = [
-    { path = "LICENSE-APACHE", hash = 0x701e2ab8, license = "Apache-2.0" },
+    { path = "LICENSE-APACHE", hash = 0x9e2a0652, license = "Apache-2.0" },
     { path = "LICENSE-MIT", hash = 0x082cb909, license = "MIT" },
 # COPYRIGHT ファイルが自動分類できないため
     { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
 ]
 
-[clarify.rand_xoshiro]
+[[clarify.rand_xoshiro]]
 expression = "MIT OR Apache-2.0"
+version = "<0.7.0"
 license-files = [
     { path = "LICENSE-APACHE", hash = 0x24b54f4b, license = "Apache-2.0" },
+    { path = "LICENSE-MIT", hash = 0xb1c84bbf, license = "MIT" },
+# COPYRIGHT ファイルが自動分類できないため
+    { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
+]
+
+[[clarify.rand_xoshiro]]
+expression = "MIT OR Apache-2.0"
+version = ">=0.7.0"
+license-files = [
+    { path = "LICENSE-APACHE", hash = 0xb5518783, license = "Apache-2.0" },
     { path = "LICENSE-MIT", hash = 0xb1c84bbf, license = "MIT" },
 # COPYRIGHT ファイルが自動分類できないため
     { path = "COPYRIGHT", hash = 0xa8762835, license = "MIT OR Apache-2.0" },
