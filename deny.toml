@@ -40,7 +40,7 @@ build.allow-build-scripts = [
     { name = "thiserror", version = "=2.0.11" }, # https://docs.rs/crate/thiserror/2.0.11/source/build.rs
     { name = "typenum", version = "=1.17.0" }, # https://docs.rs/crate/typenum/1.17.0/source/build/main.rs
     { name = "varisat", version = "=0.2.2" }, # https://docs.rs/crate/varisat/0.2.2/source/build.rs
-    { name = "zerocopy", version = "=0.8.14" }, # https://docs.rs/crate/zerocopy/0.8.14/source/build.rs
+    { name = "zerocopy", version = "=0.8.16" }, # https://docs.rs/crate/zerocopy/0.8.16/source/build.rs
 ]
 
 [sources]
