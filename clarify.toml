@@ -188,26 +188,6 @@ license-files = [
     { path = "LICENSE-MIT", hash = 0xb9f15462, license = "MIT" },
 ]
 
-[[clarify.unicode-ident]]
-expression = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
-version = "<1.0.14"
-license-files = [
-    { path = "LICENSE-APACHE", hash = 0xb5518783, license = "Apache-2.0" },
-    { path = "LICENSE-MIT", hash = 0x386ca1bc, license = "MIT" },
-# LICENSE-UNICODE ファイルが "Unicode-3.0" と誤認識されることがあるため
-    { path = "LICENSE-UNICODE", hash = 0x9698cbbe, license = "Unicode-DFS-2016" },
-]
-
-[[clarify.unicode-ident]]
-expression = "(MIT OR Apache-2.0) AND Unicode-3.0"
-version = ">=1.0.14"
-license-files = [
-    { path = "LICENSE-APACHE", hash = 0xb5518783, license = "Apache-2.0" },
-    { path = "LICENSE-MIT", hash = 0x386ca1bc, license = "MIT" },
-# 古い SPDX では "Unicode-3.0" ライセンスが登録されていないため
-    { path = "LICENSE-UNICODE", hash = 0x3475d800, license = "Unicode-3.0" },
-]
-
 [clarify.unicode-xid]
 expression = "MIT OR Apache-2.0"
 license-files = [
