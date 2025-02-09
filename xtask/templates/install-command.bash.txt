@@ -3,7 +3,7 @@
 set -e
 
 sudo apt-get update
-sudo apt-get install -y --no-install-recommends build-essential ca-certificates curl mold
+sudo apt-get install -y --no-install-recommends build-essential ca-certificates curl
 
 rust_version={{ rust_version }}
 rust_channel={{ rust_channel }}
@@ -25,9 +25,6 @@ cat > ./.cargo/config.toml << EOF
 rustflags = [
     "--cfg", "atcoder",
 ]
-
-[target.'cfg(target_os = "linux")']
-rustflags = ["-C", "link-arg=-fuse-ld=mold"]
 EOF
 
 cat > ./Cargo.toml << EOF
