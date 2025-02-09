@@ -478,7 +478,7 @@ dependencies = [
  "recur-fn",
  "regex",
  "rpds",
- "rustc-hash 2.1.0",
+ "rustc-hash 2.1.1",
  "smallvec",
  "static_assertions",
  "statrs",
@@ -699,9 +699,9 @@ checksum = "8b73dba5f4428a4b36f77fb700ebba05e7f3c8bdbea4530f94427eb2009196f8"
 
 [[package]]
 name = "once_cell"
-version = "1.20.2"
+version = "1.20.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1261fe7e33c73b354eab43b1273a57c8f967d0391e80353e51f764ac02cf6775"
+checksum = "945462a4b81e43c4e3ba96bd7b49d834c6f61198356aa858733bc4acf3cbe62e"
 
 [[package]]
 name = "ordered-float"
@@ -757,7 +757,7 @@ dependencies = [
  "indexmap",
  "integer-sqrt",
  "num-traits",
- "rustc-hash 2.1.0",
+ "rustc-hash 2.1.1",
  "thiserror 2.0.11",
 ]
 
@@ -1035,9 +1035,9 @@ checksum = "08d43f7aa6b08d49f382cde6a7982047c3426db949b1424bc4b7ec9ae12c6ce2"
 
 [[package]]
 name = "rustc-hash"
-version = "2.1.0"
+version = "2.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c7fb8039b3032c191086b10f11f319a6e99e1e82889c5cc6046f515c9db1d497"
+checksum = "357703d41365b4b27c590e3ed91eabb1b663f07c4c084095e60cbed4362dff0d"
 
 [[package]]
 name = "rustversion"
