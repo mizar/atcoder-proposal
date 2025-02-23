@@ -18,7 +18,7 @@ rand_xoshiro = "=0.7.0"
 statrs = "=0.18.0"
 primal = "=0.3.3"
 # 202301から:
-ac-library-rs = { git = "https://github.com/rust-lang-ja/ac-library-rs", rev = "cfc44a39d229dd041acc4a499643f43407b14feb" }
+ac-library-rs = { git = "https://github.com/rust-lang-ja/ac-library-rs", rev = "663c8fb9a6cd2cc3524b2815c2907abc564cb97a" }
 #ac-library-rs = "=0.1.1"
 once_cell = "=1.20.3"
 static_assertions = "=1.1.0"

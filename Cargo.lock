@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "ac-library-rs"
 version = "0.2.0-alpha.1"
-source = "git+https://github.com/rust-lang-ja/ac-library-rs?rev=cfc44a39d229dd041acc4a499643f43407b14feb#cfc44a39d229dd041acc4a499643f43407b14feb"
+source = "git+https://github.com/rust-lang-ja/ac-library-rs?rev=663c8fb9a6cd2cc3524b2815c2907abc564cb97a#663c8fb9a6cd2cc3524b2815c2907abc564cb97a"
 
 [[package]]
 name = "aho-corasick"
