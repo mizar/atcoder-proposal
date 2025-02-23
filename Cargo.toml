@@ -16,6 +16,7 @@ rpds = "=1.1.0"
 rand_xorshift = "=0.4.0"
 rand_xoshiro = "=0.7.0"
 statrs = "=0.18.0"
+primal = "=0.3.3"
 # 202301から:
 ac-library-rs = { git = "https://github.com/rust-lang-ja/ac-library-rs", rev = "cfc44a39d229dd041acc4a499643f43407b14feb" }
 #ac-library-rs = "=0.1.1"
