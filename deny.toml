@@ -14,7 +14,7 @@ build.allow-build-scripts = [
     { name = "getrandom", version = "=0.3.1" }, # https://docs.rs/crate/getrandom/0.3.1/source/build.rs
     { name = "im-rc", version = "=15.1.0" }, # https://docs.rs/crate/im-rc/15.1.0/source/build.rs
     { name = "indexmap", version = "=1.9.3" }, # https://docs.rs/crate/indexmap/1.9.3/source/build.rs
-    { name = "libc", version = "=0.2.169" }, # https://docs.rs/crate/libc/0.2.169/source/build.rs
+    { name = "libc", version = "=0.2.170" }, # https://docs.rs/crate/libc/0.2.170/source/build.rs
     { name = "libm", version = "=0.2.11" }, # https://docs.rs/crate/libm/0.2.11/source/build.rs
     { name = "log", version = "=0.4.17" }, # https://docs.rs/crate/log/0.4.17/source/build.rs
     { name = "matrixmultiply", version = "=0.3.9" }, # https://docs.rs/crate/matrixmultiply/0.3.9/source/build.rs
