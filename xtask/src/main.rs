@@ -200,6 +200,26 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
         }
         for expr_node in licensee.iter() {
             if let spdx::expression::ExprNode::Req(expr_req) = expr_node {
+                if package.name.as_str() == "ac-library-rs" {
+                    let re = regex::Regex::new(
+                        r#"^git\+https://github.com/rust-lang-ja/ac-library-rs\?rev=([0-9a-f]+)"#,
+                    )
+                    .unwrap();
+                    if let Some(rev) = package
+                        .source
+                        .as_ref()
+                        .and_then(|source| re.captures(&source.repr))
+                        .and_then(|caps| caps.get(1))
+                        .map(|rev| rev.as_str())
+                    {
+                        writeln!(
+                            &mut libraries,
+                            "    {{ name = '{license}', url = 'https://github.com/rust-lang-ja/ac-library-rs/blob/{rev}/Cargo.toml' }},",
+                            license = expr_req.req.license.id().unwrap().name,
+                        )?;
+                        continue;
+                    }
+                }
                 writeln!(
                     &mut libraries,
                     "    {{ name = '{license}', url = 'https://docs.rs/crate/{name}/{version}/source/Cargo.toml' }},",
@@ -360,6 +380,27 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
                     ),
                 };
 
+                if package.name.as_str() == "ac-library-rs" {
+                    let re = regex::Regex::new(
+                        r#"^git\+https://github.com/rust-lang-ja/ac-library-rs\?rev=([0-9a-f]+)"#,
+                    )
+                    .unwrap();
+                    if let Some(rev) = package
+                        .source
+                        .as_ref()
+                        .and_then(|source| re.captures(&source.repr))
+                        .and_then(|caps| caps.get(1))
+                        .map(|rev| rev.as_str())
+                    {
+                        writeln!(
+                            &mut libraries,
+                            "    {{ name = '{license}', url = 'https://github.com/rust-lang-ja/ac-library-rs/blob/{rev}/{path}' }},",
+                            license = license_name,
+                            path = path,
+                        )?;
+                        continue;
+                    }
+                }
                 writeln!(
                     &mut libraries,
                     "    {{ name = '{license}', url = 'https://docs.rs/crate/{name}/{version}/source/{path}' }},",
