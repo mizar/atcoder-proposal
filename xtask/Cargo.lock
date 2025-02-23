@@ -1808,6 +1808,7 @@ dependencies = [
  "ignore",
  "indexmap",
  "itertools",
+ "regex",
  "semver",
  "serde",
  "serde_json",
