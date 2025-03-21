@@ -52,6 +52,8 @@ version = '{{ rust_version }}'
 # - Stabilize the 2024 edition
 #   - https://github.com/rust-lang/rust/pull/133349
 #   - https://doc.rust-lang.org/nightly/edition-guide/rust-2024/index.html
+# 1.85.1: Released on: 18 March, 2025 https://releases.rs/docs/1.85.1/
+# - This is a patch release
 
 # キー: license
 # 型:   配列
