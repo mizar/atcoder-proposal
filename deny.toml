@@ -16,7 +16,6 @@ build.allow-build-scripts = [
     { name = "indexmap", version = "=1.9.3" }, # https://docs.rs/crate/indexmap/1.9.3/source/build.rs
     { name = "libc", version = "=0.2.171" }, # https://docs.rs/crate/libc/0.2.171/source/build.rs
     { name = "libm", version = "=0.2.11" }, # https://docs.rs/crate/libm/0.2.11/source/build.rs
-    { name = "log", version = "=0.4.17" }, # https://docs.rs/crate/log/0.4.17/source/build.rs
     { name = "matrixmultiply", version = "=0.3.9" }, # https://docs.rs/crate/matrixmultiply/0.3.9/source/build.rs
     { name = "memchr", version = "=2.5.0" }, # https://docs.rs/crate/memchr/2.5.0/source/build.rs
     { name = "num-bigint", version = "=0.4.3" }, # https://docs.rs/crate/num-bigint/0.4.3/source/build.rs
@@ -40,7 +39,7 @@ build.allow-build-scripts = [
     { name = "thiserror", version = "=2.0.12" }, # https://docs.rs/crate/thiserror/2.0.12/source/build.rs
     { name = "typenum", version = "=1.18.0" }, # https://docs.rs/crate/typenum/1.18.0/source/build/main.rs
     { name = "varisat", version = "=0.2.2" }, # https://docs.rs/crate/varisat/0.2.2/source/build.rs
-    { name = "zerocopy", version = "=0.8.23" }, # https://docs.rs/crate/zerocopy/0.8.23/source/build.rs
+    { name = "zerocopy", version = "=0.8.24" }, # https://docs.rs/crate/zerocopy/0.8.24/source/build.rs
 ]
 
 [sources]
@@ -62,5 +61,9 @@ allow = [
 
 [advisories]
 ignore = [
-    "RUSTSEC-2024-0436", # https://rustsec.org/advisories/RUSTSEC-2024-0436 paste - no longer maintained
+    # https://rustsec.org/advisories/RUSTSEC-2024-0436 paste - no longer maintained
+    # Announcement: https://github.com/dtolnay/paste
+    # RUSTSEC-2024-0436 affect "statrs v0.18.0", "nalgebra v0.33.2", "amplify v4.8.0",
+    # also, "simba v0.9.0", "stringly_conversions v0.1.1".
+    "RUSTSEC-2024-0436",
 ]
