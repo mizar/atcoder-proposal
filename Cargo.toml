@@ -20,7 +20,7 @@ primal = "=0.3.3"
 # 202301から:
 ac-library-rs = { git = "https://github.com/rust-lang-ja/ac-library-rs", rev = "eea0b2ac6b177fc09b706b4e727b3e62e6ef30e7" }
 #ac-library-rs = "=0.1.1"
-once_cell = "=1.21.2"
+once_cell = "=1.21.3"
 static_assertions = "=1.1.0"
 varisat = "=0.2.2"
 memoise = "=0.3.2"
