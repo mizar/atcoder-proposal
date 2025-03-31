@@ -485,6 +485,7 @@ dependencies = [
  "superslice",
  "tap",
  "text_io",
+ "thiserror 2.0.12",
  "varisat",
 ]
 
