@@ -19,7 +19,7 @@ statrs = "=0.18.0"
 primal = "=0.3.3"
 thiserror = "=2.0.12"
 # 202301から:
-ac-library-rs = { git = "https://github.com/rust-lang-ja/ac-library-rs", rev = "eea0b2ac6b177fc09b706b4e727b3e62e6ef30e7" }
+ac-library-rs = { git = "https://github.com/rust-lang-ja/ac-library-rs", rev = "f7d76f7def0b5ec99f50ec3ef1574cade21ce3b2" }
 #ac-library-rs = "=0.1.1"
 once_cell = "=1.21.3"
 static_assertions = "=1.1.0"
