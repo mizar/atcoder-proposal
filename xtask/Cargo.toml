@@ -16,7 +16,7 @@ color-eyre = "0.6.3"
 eyre = "0.6.12"
 fs-err = "3.0.0"
 ignore = "0.4.23"
-indexmap = { version = "2.7.0", features = ["serde"] }
+indexmap = { version = "2.9.0", features = ["serde"] }
 itertools = "0.14.0"
 regex = "1.11.1"
 semver = "1.0.24"
