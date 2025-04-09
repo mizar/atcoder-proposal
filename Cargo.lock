@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "ac-library-rs"
 version = "0.2.0-alpha.1"
-source = "git+https://github.com/rust-lang-ja/ac-library-rs?rev=d03074b37ad44a9794c8bdd1dde2cc3b18e766b7#d03074b37ad44a9794c8bdd1dde2cc3b18e766b7"
+source = "git+https://github.com/rust-lang-ja/ac-library-rs?rev=032ef62edcdd024657f847461e33c084520235df#032ef62edcdd024657f847461e33c084520235df"
 
 [[package]]
 name = "aho-corasick"
@@ -194,9 +194,9 @@ dependencies = [
 
 [[package]]
 name = "bstr"
-version = "1.11.3"
+version = "1.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "531a9155a481e2ee699d4f98f43c0ca4ff8ee1bfd55c31e9e98fb29d2b176fe0"
+checksum = "234113d19d0d7d613b40e86fb654acf958910802bcceab913a4f9e7cda03b1a4"
 dependencies = [
  "memchr",
  "regex-automata",
@@ -787,9 +787,9 @@ checksum = "b687ff7b5da449d39e418ad391e5e08da53ec334903ddbb921db208908fc372c"
 
 [[package]]
 name = "petgraph"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c96dc3f2709da98e228764d8f4c01c39a101dcc441547e8036372ee0522eb108"
+checksum = "7a98c6720655620a521dcc722d0ad66cd8afd5d86e34a89ef691c50b7b24de06"
 dependencies = [
  "fixedbitset",
  "hashbrown",
@@ -1091,9 +1091,9 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
 name = "rpds"
-version = "1.1.0"
+version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0e15515d3ce3313324d842629ea4905c25a13f81953eadb88f85516f59290a4"
+checksum = "a7f89f654d51fffdd6026289d07d1fd523244d46ae0a8bc22caa6dd7f9e8cb0b"
 dependencies = [
  "archery",
 ]
