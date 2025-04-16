@@ -215,7 +215,13 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
                         writeln!(
                             &mut libraries,
                             "    {{ name = '{license}', url = 'https://github.com/rust-lang-ja/ac-library-rs/blob/{rev}/Cargo.toml' }},",
-                            license = expr_req.req.license.id().unwrap().name,
+                            license = if expr_req.req.license.id().unwrap().is_gnu() {
+                                // fmt include or_later "-or-later"
+                                expr_req.req.license.to_string()
+                            } else {
+                                // fmt remove or_later "+"
+                                expr_req.req.license.id().unwrap().name.to_string()
+                            },
                         )?;
                         continue;
                     }
@@ -223,7 +229,13 @@ fn gen_toml(ArgsGenToml { spdx_data }: ArgsGenToml) -> eyre::Result<()> {
                 writeln!(
                     &mut libraries,
                     "    {{ name = '{license}', url = 'https://docs.rs/crate/{name}/{version}/source/Cargo.toml' }},",
-                    license = expr_req.req.license.id().unwrap().name,
+                    license = if expr_req.req.license.id().unwrap().is_gnu() {
+                        // fmt include or_later "-or-later"
+                        expr_req.req.license.to_string()
+                    } else {
+                        // fmt remove or_later "+"
+                        expr_req.req.license.id().unwrap().name.to_string()
+                    },
                     name = package.name,
                     version = package.version,
                 )?;
