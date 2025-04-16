@@ -9,12 +9,12 @@ multiple-versions = "allow"
 # 今回のクレートのセットにはそのようなものは含まれていない。
 # そのことを各build.rsを目視して確認した。
 build.allow-build-scripts = [
-    { name = "anyhow", version = "=1.0.97" }, # https://docs.rs/crate/anyhow/1.0.97/source/build.rs
+    { name = "anyhow", version = "=1.0.98" }, # https://docs.rs/crate/anyhow/1.0.98/source/build.rs
     { name = "az", version = "=1.2.1" }, # https://docs.rs/crate/az/1.2.1/source/build.rs
     { name = "getrandom", version = "=0.3.2" }, # https://docs.rs/crate/getrandom/0.3.2/source/build.rs
     { name = "im-rc", version = "=15.1.0" }, # https://docs.rs/crate/im-rc/15.1.0/source/build.rs
     { name = "indexmap", version = "=1.9.3" }, # https://docs.rs/crate/indexmap/1.9.3/source/build.rs
-    { name = "libc", version = "=0.2.171" }, # https://docs.rs/crate/libc/0.2.171/source/build.rs
+    { name = "libc", version = "=0.2.172" }, # https://docs.rs/crate/libc/0.2.172/source/build.rs
     { name = "libm", version = "=0.2.11" }, # https://docs.rs/crate/libm/0.2.11/source/build.rs
     { name = "matrixmultiply", version = "=0.3.9" }, # https://docs.rs/crate/matrixmultiply/0.3.9/source/build.rs
     { name = "memchr", version = "=2.5.0" }, # https://docs.rs/crate/memchr/2.5.0/source/build.rs
@@ -25,7 +25,7 @@ build.allow-build-scripts = [
     { name = "num-rational", version = "=0.4.1" }, # https://docs.rs/crate/num-rational/0.4.1/source/build.rs
     { name = "num-traits", version = "=0.2.19" }, # https://docs.rs/crate/num-traits/0.2.19/source/build.rs
     { name = "paste", version = "=1.0.15" }, # https://docs.rs/crate/paste/1.0.15/source/build.rs
-    { name = "proc-macro2", version = "=1.0.94" }, # https://docs.rs/crate/proc-macro2/1.0.94/source/build.rs
+    { name = "proc-macro2", version = "=1.0.95" }, # https://docs.rs/crate/proc-macro2/1.0.95/source/build.rs
     { name = "proc-macro-error", version = "=1.0.4" }, # https://docs.rs/crate/proc-macro-error/1.0.4/source/build.rs
     { name = "proc-macro-error-attr", version = "=1.0.4" }, # https://docs.rs/crate/proc-macro-error-attr/1.0.4/source/build.rs
     { name = "quote", version = "=1.0.40" }, # https://docs.rs/crate/quote/1.0.40/source/build.rs
