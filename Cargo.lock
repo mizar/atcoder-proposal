@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "ac-library-rs"
 version = "0.2.0-alpha.1"
-source = "git+https://github.com/rust-lang-ja/ac-library-rs?rev=032ef62edcdd024657f847461e33c084520235df#032ef62edcdd024657f847461e33c084520235df"
+source = "git+https://github.com/rust-lang-ja/ac-library-rs?rev=3085eda4776093268c3aedc67a395e97484cc463#3085eda4776093268c3aedc67a395e97484cc463"
 
 [[package]]
 name = "aho-corasick"
@@ -484,7 +484,7 @@ dependencies = [
  "petgraph",
  "primal",
  "proconio 0.5.0",
- "rand 0.9.0",
+ "rand 0.9.1",
  "rand_chacha 0.9.0",
  "rand_core 0.9.3",
  "rand_distr 0.5.1",
@@ -936,13 +936,12 @@ dependencies = [
 
 [[package]]
 name = "rand"
-version = "0.9.0"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3779b94aeb87e8bd4e834cee3650289ee9e0d5677f976ecdb6d219e5f4f6cd94"
+checksum = "9fbfd9d094a40bf3ae768db9361049ace4c0e04a4fd6b359518bd7b73a73dd97"
 dependencies = [
  "rand_chacha 0.9.0",
  "rand_core 0.9.3",
- "zerocopy",
 ]
 
 [[package]]
@@ -1000,7 +999,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6a8615d50dcf34fa31f7ab52692afec947c4dd0ab803cc87cb3b0b4570ff7463"
 dependencies = [
  "num-traits",
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
