@@ -50,6 +50,7 @@ name = 'rustc'
 version = '{{ rust_version }}'
 # 1.86.0: Released on: 3 April, 2025 https://releases.rs/docs/1.86.0/
 # 1.87.0: Will be stable on: 15 May, 2025 https://releases.rs/docs/1.87.0/
+# 1.88.0: Will be stable on: 26 June, 2025 https://releases.rs/docs/1.88.0/
 
 # キー: license
 # 型:   配列
