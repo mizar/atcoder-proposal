@@ -32,7 +32,7 @@ hashbag = "=0.1.12"
 pathfinding = "=4.14.0"
 recur-fn = "=2.2.0"
 indexing = { version = "=0.4.1", features = ["experimental_pointer_ranges"] }
-amplify = { version = "=4.8.0", features = ["c_raw", "rand", "stringly_conversions"] }
+amplify = { version = "=4.8.1", features = ["c_raw", "rand", "stringly_conversions"] }
 amplify_derive = "=4.0.1"
 amplify_num = { version = "=0.5.3", features = ["std"] }
 easy-ext = "=1.0.2"
