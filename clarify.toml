@@ -25,6 +25,12 @@ license-files = [
     { path = "COPYING", hash = 0x969f37d8, license = "Unlicense OR MIT" },
 ]
 
+[clarify.libm]
+expression = "MIT"
+license-files = [
+    { path = "LICENSE.txt", hash = 0x2d75fe33, license = "MIT" },
+]
+
 [clarify.memchr]
 expression = "Unlicense OR MIT"
 license-files = [
