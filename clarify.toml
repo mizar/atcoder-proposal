@@ -45,7 +45,7 @@ expression = "Apache-2.0"
 license-files = [
 # `LICENSE` ファイルに `../LICENSE` (nalbegaのLICENSEを参照) とだけ書かれているため
 # https://github.com/dimforge/nalgebra/blob/main/nalgebra-macros/LICENSE
-    { path = "LICENSE", hash = 0xe2278313, license = "Apache-2.0" },
+    { path = "LICENSE", hash = 0x66bc0f19, license = "Apache-2.0" },
 ]
 
 [clarify.petgraph]
