@@ -55,8 +55,8 @@ language = 'Rust'
 #       'Java24 (OpenJDK 24.0.1)'
 #       'Python3 (CPython 3.13.3)'
 display = 'Rust (rustc {{ rust_version }})'
-# 1.88.0: Released on: 26 June, 2025 https://releases.rs/docs/1.88.0/
-# 1.89.0: Will be stable on: 7 August, 2025 https://releases.rs/docs/1.89.0/
+# 1.89.0: Released on: 7 August, 2025 https://releases.rs/docs/1.89.0/
+# 1.90.0: Will be stable on: 18 September, 2025 https://releases.rs/docs/1.90.0/
 
 # キー: license
 # 型:   配列
