@@ -9,7 +9,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { target: x86_64-pc-windows-msvc, os: windows-2019 }
           - { target: x86_64-pc-windows-msvc, os: windows-2022 }
           - { target: x86_64-pc-windows-msvc, os: windows-2025 }
           - { target: x86_64-apple-darwin, os: macos-13 }
